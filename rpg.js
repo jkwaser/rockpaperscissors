@@ -4,8 +4,12 @@ function computerPlay() {
 }
 
 function compare(playerSelection, computerSelection) {
-    if playerSelection == computerSelection {
+    if (playerSelection == computerSelection) {
         return "Tie! ${playerSelection} and ${computerSelection} are the same!"
     }
-
+    else if (playerSelection == "ROCK" && computerSelection == "SCISSORS" ||
+        playerSelection == "SCISSORS" && computerSelection == "PAPER" ||
+        playerSelection == "PAPER" && computerSelection == "ROCK") {
+            return "Victory for humanity!"
+        }
 }
