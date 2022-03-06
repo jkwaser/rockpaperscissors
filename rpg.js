@@ -3,13 +3,13 @@ function computerPlay() {
      return rps[Math.floor(Math.random()*rps.length)];
 }
 
-function compare(playerSelection, computerSelection) {
+function playRound(playerSelection, computerSelection) {
 
     let playerSel = playerSelection.toUpperCase();
     let compSel = computerSelection.toUpperCase();
 
-    if (playerSelection == computerSelection) {
-        return "Tie! ${playerSelection} and ${computerSelection} are the same!"
+    if (playerSel == compSel) {
+        return `Tie! ${playerSel} and ${compSel} are the same!`
     }
     else if (playerSel == "ROCK" && compSel == "SCISSORS" ||
     playerSel == "SCISSORS" && compSel == "PAPER" ||
@@ -22,6 +22,10 @@ function compare(playerSelection, computerSelection) {
     playerSel == "SCISSORS" && compSel == "ROCK") {
             return "The machine hordes march ever-closer to victory... you failed."
         }
+
+    else {
+        return "This doesn't seem right... try again."
+    }
 }
 
  // - Need to get this in all caps. 
