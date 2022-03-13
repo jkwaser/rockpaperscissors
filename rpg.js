@@ -32,15 +32,19 @@ function game() {
     let compWin = 0;
     let playWin = 0;
     for (let i = 0; i < 5; i++) {
-        let checkWin = playRound(playerSelection, computerPlay());
+        let checkWin = playRound(prompt("What do you play? Rock, paper, or scissors?"), computerPlay());
         if (checkWin == 'Victory!') {
-            i += 1;
             playWin += 1
+            console.log(`You won this round!, you have ${playWin} victories, the machine has ${compWin}`)
         } 
         else if (checkWin == 'Loss.') {
-            i += 1;
             compWin += 1
+            console.log(`You lost this round... you have ${playWin} victories, the machine has ${compWin}`)
         }
+        else {
+            console.log('Tie..')
+        }
+
      }
      if (playWin > compWin) {
          return "Victory for humanity!"
