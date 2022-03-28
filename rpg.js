@@ -52,6 +52,9 @@ function game() {
      else if (compWin > playWin) {
          return "The robot hordes have overcome you..."
      }
+     else {
+         return "A tie!"
+     }
 }
 
  // - Need to get this in all caps. 
